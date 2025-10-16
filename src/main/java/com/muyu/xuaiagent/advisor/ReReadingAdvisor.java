@@ -12,9 +12,8 @@ import java.util.Map;
  */
 public class ReReadingAdvisor implements CallAroundAdvisor, StreamAroundAdvisor {
 
-
     /**
-     * 执行请求前改写 Prompt
+     * 执行请求前，改写 Prompt
      * @param advisedRequest
      * @return
      */
@@ -24,11 +23,10 @@ public class ReReadingAdvisor implements CallAroundAdvisor, StreamAroundAdvisor 
         advisedUserParams.put("re2_input_query", advisedRequest.userText());
 
         return AdvisedRequest.from(advisedRequest)
-                // 动态变量
                 .userText("""
-                        {re2_input_query}
-                        Read the question again: {re2_input_query}
-                        """)
+			    {re2_input_query}
+			    Read the question again: {re2_input_query}
+			    """)
                 .userParams(advisedUserParams)
                 .build();
     }
