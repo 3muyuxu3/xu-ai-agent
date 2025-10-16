@@ -7,6 +7,13 @@ server:
   port: 8123
   servlet:
     context-path: /api
+  ai:
+    vectorstore:
+      pgvector:
+        index-type: HNSW
+        dimensions: 1536  # 维度
+        distance-type: COSINE_DISTANCE
+        max-document-batch-size: 10000
 # springdoc-openapi
 springdoc:
   swagger-ui:
