@@ -1,5 +1,5 @@
 # AI超级智能体
-作者：木羽
+作者：木羽栩
 # 技术栈
 Java 21 + Spring Boot 3 框架
 Spring AI + LangChain4j
