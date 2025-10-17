@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 public class ImageSearchTool {
 
     //TODO 切换成自己的api_key
-    private static final String API_KEY = "切换成自己API_KEY";
+    private static final String API_KEY = "G5aM9Ik6YxlQsv3MIUWbQPsfWMZHPrBTHe3Bg9RoABaBknL1Ei0BFYu6";
 
     private static final String API_URL = "https://api.pexels.com/v1/search";
 
