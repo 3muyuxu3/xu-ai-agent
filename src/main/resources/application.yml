@@ -16,8 +16,18 @@ server:
         max-document-batch-size: 10000
     mcp:
       client:
-        stdio:
-          servers-configuration: classpath:mcp-servers.json
+        sse:
+          connections:
+            server1:
+              url: http://localhost:8127
+    #        stdio:
+    #          servers-configuration: classpath:mcp-servers.json
+    #    vectorstore:
+    #      pgvector:
+    #        index-type: HNSW
+    #        dimensions: 1536
+    #        distance-type: COSINE_DISTANCE
+    #        max-document-batch-size: 10000
 # springdoc-openapi
 springdoc:
   swagger-ui:
@@ -38,4 +48,4 @@ knife4j:
 # 定义日志级别
 logging:
   level:
-    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: debug
+    org.springframework.ai: DEBUG
